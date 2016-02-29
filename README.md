@@ -17,7 +17,7 @@ Openhab client = Openhab(host, port);
 To send a state change:
 
 ```
-  String item_name = "Test_Thing"; // Item name is openhab
+  String item_name = "Test_Thing"; // Item name in openhab
   String response = client.put(item_name, value);
   Serial.print(response);
 ```

@@ -23,3 +23,8 @@ To send a state change:
   String response = client.put(item_name, value);
   Serial.print(response);
 ```
+
+
+## Licence
+ 
+GPL V3

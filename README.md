@@ -2,9 +2,7 @@
 
 Runs on esp8266.
 
-Connects to wifi AP
-
-Sends state changes to openhab's rest API
+Connects to wifi, sends state changes to openhab's rest API
 
 ## Usage
 

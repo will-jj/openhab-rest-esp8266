@@ -1,0 +1,5 @@
+Openhab	KEYWORD1
+url	KEYWORD2
+get	KEYWORD2
+put	KEYWORD2
+send KEYWORD2

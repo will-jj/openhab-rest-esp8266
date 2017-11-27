@@ -1,6 +1,7 @@
 /**
  * Openhab.cpp
  *
+ * https://github.com/Br3nda/openhab-rest-esp8266 
  */
 
 #include "Arduino.h"
@@ -29,9 +30,9 @@ String Openhab::url(String item) {
 
 String Openhab::get(String item) {
   String url = Openhab::url(item);
-  String request = "GET " + url + " HTTP/1.1\n";
-  request += "Host: " + (String)_host + "\n";
-  request += "Connection: close\n";
+  String request = "GET " + url +"\n";//+ " HTTP/1.1\n";
+  //request += "Host: " + (String)_host + "\n";
+  //request += "Connection: close\n";
 
   return Openhab::send(request);
  }
@@ -57,14 +58,17 @@ String Openhab::send(String request) {
   WiFiClient client;
   if (!client.connect(_host, _port)) {
     return "ERROR: failed to connect";
+
   }
 
   client.print(request);
-  delay(10);
+  delay(30);
 
   String response;  
   while(client.available()){
+    
     response += client.readStringUntil('\r');
+    
   }
   return response;
 }

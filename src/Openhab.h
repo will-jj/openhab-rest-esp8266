@@ -1,6 +1,7 @@
 /**
  * Openhab.h
  *
+ * https://github.com/Br3nda/openhab-rest-esp8266 
  */
 
 #ifndef Openhab_h
